@@ -26,66 +26,66 @@ CognitiveConcierge é um exemplo de aplicativo Swift de ponta a ponta com um fro
 
 	<img src="images/provision.png" width="500">
 
-8. Give your Cloud Runtime a unique name, and click Next.  This deployment to Bluemix may take a few minutes.
+8. Dê um nome único ao seu Runtime, e clique em Next. Esse dploy para o Bluemix pode levar alguns minutos.
 
-### Point iOS Application to Server Application
-1. In ICT, ensure that the Connected to: field in the Client application is pointed to your server instance running on Bluemix.  You can also point to your localhost for local testing, but you need to be running a local instance of the server application for this to work.
+### Aponte a aplicação iOS para o Servidor de Aplicação
+	1. Em ICT, certifique-se de que o campo "Connected to:" no aplicativo Cliente esteja apontado para a instância do servidor em execução no Bluemix. Você também pode apontar para o localhost para testes locais, mas você precisa estar executando uma instância local do aplicativo de servidor para que isso funcione.
 
-### Update Conversation Service
-1. Once ICT has provisioned your Cloud Runtime, you should have a Conversation Service instance in your Bluemix dashboard.  This Service enables you to add a natural language interface to your applications.  While you could create a conversation tree manually, we've provided the conversation for this application in the Resources folder at the top level of the project.
-2. In ICT, Click on the Bluemix icon in Cloud Runtime to go to your 'Application Details' page on Bluemix.
+### Atualiza o Serviço de Conversação
+1. Uma vez que o ITC provisionar o Cloud Runtime, você deve ter uma instância do Serviço de Conversação no painel do Bluemix. Este Serviço permite que você adicione uma interface de idioma natural para seus aplicativos. Embora você possa criar uma árvore de conversação manualmente, fornecemos a conversação para esse aplicativo na pasta Resourcesno nível superior do projeto.
+2. Em ICT, clique no ícone do Bluemix no Cloud Runtime para ir para a página "Detalhes do aplicativo" no Bluemix.
 
 	<img src="images/cloud_runtime.png" width="500">
 
-3. Select the CognitiveConcierge-Conversation Service under Connections.
+3. Selecione o Serviço CognitiveConcierge-Conversation em Conexões.
 
 	<img src="images/conversation_service.png" width="500">
 
-4. Scroll down and select 'Launch Tool'.
-5. Log into Watson Conversation with your IBM ID and you will be brought to the 'Create Workspace' page. Select Import, and upload your .JSON file (Resources/conversationWorkspace.json) representing the conversation for this application.
+4. Role para baixo e selecione 'Launch Tool'.
+5. Inicie sessão no Watson Conversation com o seu IBM ID e você será levado para a página 'Criar Espaço de Trabalho'. Selecione Importar e envie o arquivo .JSON (Resources/conversationWorkspace.json) que representa a conversação para este aplicativo.
 
 	<img src="images/create_workspace.png" width="500">
 
-6. Once the Conversation is created, select the More Options icon, and click View Details.  Note the Workspace ID for use in your iOS application.
+6. Depois que a Conversa for criada, selecione o ícone Mais Opções e clique em Exibir Detalhes. Observe a ID do espaço de trabalho para uso em seu aplicativo iOS.
 
 	<img src="images/more_options.png" width="500">
 
-7. Open the CognitiveConcierge.xcworkspace file from ICT. Copy the WorkspaceID into the CognitiveConcierge.plist file.
+7. Abra o arquivo CognitiveConcierge.xcworkspace do ICT. Copie o WorkspaceID no arquivo CognitiveConcierge.plist.
 
 	<img src="images/plist.png" width="500">
 
-8. Note: Watson may take a few minutes to train based on the conversation workspace you uploaded.  Check if Watson is finished training by clicking the conversation workspace, then Dialog, and then the chat icon in the upper right hand corner.  
+8. Nota: O Watson pode levar alguns minutos para treinar com base workspace de conversação que você carregou. Verifique se o Watson terminou o treinamento clicando no workspace da conversa, em Diálogo e, em seguida, no ícone de bate-papo no canto superior direito.  
 
 	<img src="images/conversation_dialog.png" width="500">
 
-    This is also how you can try out the conversation and test your bot.
+    Assim você também pode experimentar a conversa e testar seu bot.
 	
 	<img src="images/conversation_testing.png" width="500">
 
-### Run the iOS Application
-1. Install Cocoapods Dependency Manager in Terminal with the command `sudo gem install cocoapods`
+### Execute o aplicativo iOS 
+1. Instale o Cocoapods Dependency Manager no Terminal com o comando 'sudo gem install cocoapods'
 
-2. Install Carthage Dependency Manager.  Either download and run the .pkg file for their latest release https://github.com/Carthage/Carthage/releases or simply run `brew update` followed by `brew install carthage`
-3. From Terminal, change directories into the YourProjectName/CognitiveConcierge-iOS folder.
-4. Run the following commands to install the necessary dependencies:
+2. Instale o Carthage Dependency Manager.  Baixe e execute o arquivo .pkg para a última release https://github.com/Carthage/Carthage/releases ou simplesmente execute 'brew update' seguido por 'brew install carthage'
+3. Do Terminal, mude o diretório de trabalho para NomeDoSeuProjeto/CognitiveConcierge-iOS.
+4. Execute os seguintes comandos para instalar as dependências necessárias:
   ```
   carthage update --platform iOS
   
   pod install
   ```
-5. Open the CognitiveConcierge.xcworkspace file in Xcode 8 either from ICT or from your terminal using `open CognitiveConcierge.xcworkspace`
-6. Enter your credentials for each service required to run the app into the same CognitiveConcierge.plist file you entered the Conversation Service's Workspace ID: `CognitiveConcierge-iOS/CognitiveConcierge/CognitiveConcierge.plist`. Find each credential by returning to your application details page which you can access by clicking on the Bluemix icon within ICT's Cloud Runtime or following these steps:
-    1. Go to [Bluemix](https://new-console.ng.bluemix.net/#overview) and make sure you're on the 'Console' screen:
+5. Abra o arquivo CognitiveConcierge.xcworkspace no Xcode 8 do seu ICT ou do seu terminal usando `open CognitiveConcierge.xcworkspace`
+6. Digite suas credenciais para cada serviço necessário para executar o aplicativo no mesmo arquivo CognitiveConcierge.plist que você inseriu o workspaceID do serviço de conversação: `CognitiveConcierge-iOS / CognitiveConcierge / CognitiveConcierge.plist`. Encontre cada credencial retornando à página de detalhes do aplicativo a qual você pode acessar clicando no ícone do Bluemix no Cloud Runtime da ICT ou seguindo estas etapas:
+    1. Va para o[Bluemix](https://new-console.ng.bluemix.net/#overview) e se assegure de que está na aba 'Console':
 
         <img src="images/console.png" width="500">
 
-    2. Select 'All Items' on the Console Screen and click on the name of your application listed under Cloud Foundry Applications. The route/URL provided next to the name will only take you to page hosted by your app; not the page we're looking for. This should bring you to the Bluemix page you saw previously in finding the Conversation service.
+    2. Selecione 'All Items' na tela do console e clique no nome do aplicativo listado em Aplicativos do Cloud Foundry. A rota / URL fornecida ao lado do nome só o levará à página hospedada por seu aplicativo; Não à página que estamos procurando. Isso deve trazê-lo para a página do Bluemix que você viu anteriormente ao encontrar o serviço Conversation.
 
-7. Click on 'Runtime' then 'Environment Variables' to access every services' credentials within VCAP_Services to add into the `CognitiveConcierge.plist` file.
+7. Clique em 'Runtime', e em 'Environment Variables' para acessar todas as credenciais de acesso de todos os serviços dentro de VCAP_Services para adicionar no arquivo 'CognitiveConcierge.plist'.
 
       <img src="images/envmt_variables.png" width="500">
 
-8. Press the Play button in Xcode to build and run the project in the simulator or on your iPhone!
+8. Aperte o botão de Play no Xcode para fazer o build e executar o projeto num simulador, ou no seu iPhone!
 
 ## Privacy Notice
 This Swift application includes code to track deployments to [IBM Bluemix](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM-Bluemix/cf-deployment-tracker-service) service on each deployment:

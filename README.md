@@ -4,25 +4,25 @@
 [![cognitive concierge video](http://img.youtube.com/vi/kQqE0hMg0Q8/0.jpg)](http://www.youtube.com/watch?v=kQqE0hMg0Q8 "Video Title")
 
 # CognitiveConcierge
-CognitiveConcierge is an end-to-end Swift application sample with an iOS front end and a Kitura web framework back end. This application also demonstrates how to pull in a number of different Watson services to your Swift client and server side apps via the Watson Developer Cloud's iOS SDKs, including Conversation, Text to Speech, Speech to Text, and the Alchemy Language APIs.
+CognitiveConcierge é um exemplo de aplicativo Swift de ponta a ponta com um front-end iOS e um back-end Kitura Web Framework. Esta aplicação também demonstra como puxar um número de diferentes serviços Watson para o seu cliente Swift e aplicativos do lado do servidor via SDKs iOS do Watson Developer Cloud, incluindo conversação, texto para voz, fala para texto e as APIs Alchemy Language.
 
 <img src="images/CC1.png" width="250"><img src="images/CC2.png" width="250"><img src="images/CC7.png" width="250">
 
-## IBM Cloud Tools for Swift (ICT) Instructions
-### Obtain a Google Places API Key for Web
-1. For this project, you'll need an API Key from Google Places, so that app can have access to review text which will be sent to the Alchemy API service for analysis.  Instructions for obtaining a key can be found [here](https://developers.google.com/places/web-service/get-api-key).
-2. Once you have an API Key, go to the Google Developer's Console, and enable the Google Places API for iOS as well.  Make note of the API key for later use in your server and iOS applications.
+## IBM Cloud Tools for Swift (ICT) Instruções
+### Obtenha uma Google Places API Key para Web
+1. Para este projeto, você precisará de uma Chave de API do Google Places para que o aplicativo possa acessar o texto de revisão que será enviado ao serviço da API da Alchemy para análise. As instruções para obter uma chave podem ser encontradas [aqui](https://developers.google.com/places/web-service/get-api-key).
+2. Depois de ter uma chave de API, vá ao Google Developer's Console e ative a API do Google Places para iOS. Anote a chave da API para uso posterior em seu servidor e aplicativos iOS.
 
-### Deploy the Server Application to Bluemix using ICT.
-1. Install [IBM Cloud Tools for Swift] (http://cloudtools.bluemix.net/) for MacOS.
-2. Once you've installed the application, you can open it to get started.
-3. Click the Create (+) button to set up a new project, and then select the Cognitive Concierge Application.
-5. Click Save Files to Local Computer to clone the project.
-6. Once the project is cloned, open up the .xcodeproj file that was created for you in ICT under Local Server Repository. Edit the Sources/restaurant-recommendations/Configuration.swift file's Constants struct with your own Google API Key for Web.
+### Deploy do Servidor de Aplicação no Bluemix usando ICT.
+1. Instale [IBM Cloud Tools for Swift] (http://cloudtools.bluemix.net/) para MacOS.
+2. Depois de instalar o aplicativo, você pode abri-lo para começar.
+3. Clique no botão Criar (+) para configurar um novo projeto e, em seguida, selecione o Aplicativo de Concierge Cognitivo.
+5. Clique em Guardar ficheiros para computador local para clonar o projeto.
+6. Assim que o projeto for clonado, abra o arquivo .xcodeproj que foi criado para você no ITC dentro do Local Server Repository. Edite o arquivo Configuration.swift que está em Sources/restaurant-recommendations/Configuration.swift com a sua própria chave de API do Google.
 
 	<img src="images/xcodeproj.png" width="500">
 
-7. Finally, you can use ICT to deploy the server on Bluemix.  Click Provision and Deploy Sample Server on Bluemix under Cloud Runtimes.
+7. Finalmente, você pode usar o ICT para fazer o deploy do servidor no Bluemix. Clique em Provision and Deploy Sample Server na parte de Cloud Runtimes.
 
 	<img src="images/provision.png" width="500">
 

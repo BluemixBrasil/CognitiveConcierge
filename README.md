@@ -87,8 +87,8 @@ CognitiveConcierge é um exemplo de aplicativo Swift de ponta a ponta com um fro
 
 8. Aperte o botão de Play no Xcode para fazer o build e executar o projeto num simulador, ou no seu iPhone!
 
-## Privacy Notice
-This Swift application includes code to track deployments to [IBM Bluemix](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM-Bluemix/cf-deployment-tracker-service) service on each deployment:
+## Nota de Privacidade
+Esta aplicação Swift inclui código para acompanhar as implementações do [IBM Bluemix] (https://www.bluemix.net/) e outras plataformas Cloud Foundry. As seguintes informações são enviadas para um serviço [Deployment Tracker] (https://github.com/IBM-Bluemix/cf-deployment-tracker-service) em cada implantação:
 
 * Swift project code version (if provided)
 * Swift project repository URL
@@ -99,10 +99,10 @@ This Swift application includes code to track deployments to [IBM Bluemix](https
 * Labels of bound services
 * Number of instances for each bound service and associated plan information
 
-This data is collected from the parameters of the `CloudFoundryDeploymentTracker`, the `VCAP_APPLICATION` and `VCAP_SERVICES` environment variables in IBM Bluemix and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Bluemix to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+Esses dados são coletados a partir dos parâmetros das variáveis de ambiente `CloudFoundryDeploymentTracker`,` VCAP_APPLICATION` e `VCAP_SERVICES` no IBM Bluemix e em outras plataformas Cloud Foundry. Esses dados são usados pela IBM para rastrear métricas em torno de implantações de aplicativos de amostra para IBM Bluemix para medir a utilidade de nossos exemplos, para que possamos melhorar continuamente o conteúdo que oferecemos a você. Somente as implantações de aplicativos de exemplo que incluem código para executar ping no serviço Deployment Tracker serão rastreadas.
 
-### Disabling Deployment Tracking
-Deployment tracking can be disabled by removing the following line from main.swift:
+### Desabilitando o Deployment Tracking
+O Deployment tracking pode ser desabilitado removendo a seguinte linha do arquivo main.swift:
 ```
 CloudFoundryDeploymentTracker(repositoryURL: "https://github.ibm.com/MIL/CognitiveConcierge", codeVersion: nil).track()
 
